@@ -57,7 +57,7 @@ before_action :set_message,only: [:show, :edit, :update, :destroy]
 
   # Strong Parameter
   def message_params
-    params.require(:message).permit(:content)
+    params.require(:message).permit(:content,:title)
   end
 
 end

@@ -1,6 +1,8 @@
 <h1>id: <%= @message.id %> のメッセージ詳細ページ</h1>
 
-<p><%= @message.content %></p>
+<p>タイトル: <%= @message.title %></p>
+<p>メッセージ: <%= @message.content %></p>
+
 
 <%= link_to '一覧に戻る', messages_path %>
 <%= link_to 'このメッセージを編集する', edit_message_path(@message) %>
@@ -8,6 +10,6 @@
 
 <ul>
   <% @messages.each do |message| %>
-    <li><%= link_to message.id, message %> : <%= message.content %></li>
+    <li><%= link_to message.id, message %> : <%= message.title %> &gt; <%= message.content %></li>
   <% end %>
 </ul>
