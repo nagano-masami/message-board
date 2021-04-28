@@ -31,6 +31,7 @@ before_action :set_message,only: [:show, :edit, :update, :destroy]
 
   def update
     set_message
+    #binding.pry
 
     if @message.update(message_params)
       flash[:success] = 'Message は正常に更新されました'
